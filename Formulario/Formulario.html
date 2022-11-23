@@ -1,0 +1,97 @@
+<!--html:5 cria a base-->
+<!--id chave unica-->
+<!--class mais de um pode usa-->
+<!--strong deixa negrito-->
+<!DOCTYPE html>
+<html lang="en">
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="Formulario.css" media="screen">
+    <title>Cadastro</title>
+</head>
+<body>
+    
+    <div>
+        <h1 id="titulo">Cadastro de DEVs</h1>
+        <p id="subtitulo">Complete suas informações</p>
+        <br>
+    </div>
+
+    <form> <!--cria formulario-->
+
+        <fieldset class="grupo"> <!--agrupa campos-->
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label> <!--nomenclatura do campo-->
+                <input type="text" name="nome" id="nome" required> <!--entrada do tipo text--> <!--requiered obriga a colcocar-->
+            </div>
+            <div class="campo">  
+                <label for="sobrenome"><strong>Sobrenome</strong></label> <!--nomenclatura do campo-->
+                <input type="text" name="sobrenome" id="sobrenome" required> <!--entrada do tipo text-->
+            </div>
+        </fieldset>
+
+        <div class="campo"> <!--campo de email fica separado por isso abrir outra div-->
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required> <!--entrada do tipo email ja tem no html(faz algusn tratamentos)-->
+        </div>
+
+        <div class="campo">
+            <label><strong>Area de Atuação</strong></label>
+            <label>
+                <input type="radio" name="devweb" value="frontend">Front-End <!--radio é de selecioanr a bolinha-->
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="backend">Back-End
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="fullstack">Fullstack
+            </label>
+        </div>
+
+        <div class="campo">
+            <label for="senioridade"><strong>Senioridade</strong></label>
+            <select id="seneridade">
+                <option selected disabled value="">Selecione</option> <!--opção basica sem valor -->
+                <option>Junior</option> 
+                <option>Pleno</option>
+                <option>Senior</option>
+            </select>
+        </div>
+        
+        <fieldset class="grupo">
+            <div id="check"> 
+                <label><strong>Selecione as tecnologias utilizadas:</strong></label> <br> <br> <!--checbox é caxinha de selecionar-->
+                <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML" checked> <!--checked deixa selecionado-->
+                <label for="tecnologia1">HTML</label>
+                <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+                <label for="tecnologia2">CSS</label>
+                <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JS">
+                <label for="tecnologia3">JS</label>
+                <input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
+                <label for="tecnologia4">PHP</label>
+                <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
+                <label for="tecnologia5">C#</label>
+                <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python">
+                <label for="tecnologia6">Python</label>
+                <input type="checkbox" id="tecnologia7" name="tecnologia7" value="JAVA">
+                <label for="tecnologia7">JAVA</label>
+            </div>
+        </fieldset>
+        
+        <div class="campo">
+            <br>
+            <label><strong>Conte um pouco da sua experiência</strong></label>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea> <!--criar area de texto-->
+        </div>
+        
+        <fieldset class="grupo">
+            <button type="submit" class="botao2">Enviar</button>  <!--botao de enviar-->
+            <button type="reset" class="botao1">Limpar</button>  <!--botao de q volta os campos ao padrão-->
+        </fieldset>
+    </form>
+
+</body>
+</html>
+
